@@ -1,129 +1,90 @@
-# Delivery Analysis (Excel-Based Logistics Performance Study)
+🚚 Delivery Performance & Logistics Optimization Analysis
+📌 Project Overview
 
-## Overview
+This project analyzes a simulated last-mile delivery dataset to understand the key drivers of delivery delays and evaluate system-level optimization strategies.
 
-This project is a logistics performance analysis conducted using Microsoft Excel on a Glovo-style delivery dataset.  
-The objective is to understand how rider capacity affects delivery efficiency and how workload distribution influences overall system performance.
+The focus is not just on identifying problems, but on testing operational improvements such as rider capacity, demand-based allocation, and order batching.
 
-The analysis focuses on identifying inefficiencies in rider allocation and simulating improvements through capacity optimisation.
+🎯 Objective
 
----
+To evaluate how delivery performance changes under different operational scenarios:
 
-## Problem Statement
+Rider capacity constraints
+Demand distribution across time periods
+Order batching efficiency
+System-level workload imbalance
+📊 Key Findings (Diagnosis)
+Kitchen preparation time is relatively stable across cuisine types and time periods
+Delivery delays are not driven by prep time variability
+Demand varies significantly across daytime (Morning, Afternoon, Evening, Night)
+Rider supply remains fixed (51 riders across all periods), creating structural imbalance
+Peak periods experience higher workload pressure per rider
+🧠 Analytical Approach
+1. Workload Modeling
+Defined Orders per Rider as a proxy for system demand pressure
+Used annual and segmented demand distributions to evaluate imbalance
+2. Sensitivity Modeling
+Developed a calibrated coefficient (k = 0.056) to estimate the relationship between workload and delivery time
+3. Scenario Testing
 
-In many last-mile delivery systems, demand grows faster than rider supply. This imbalance leads to:
+Simulated three operational strategies:
 
-- Increased workload per rider  
-- Higher delivery delays  
-- Reduced operational efficiency  
+Rider capacity expansion
+Demand-based rider redistribution across daytime
+Order batching (batch size = 3)
+⚙️ Key Simulations
+🚴 Rider Redistribution
+Riders allocated based on demand intensity across daytime
+Improved peak-hour balance but limited system-wide impact due to fixed capacity
+📦 Order Batching (Batch Size = 3)
+Increased rider productivity per trip
+Reduced effective workload per rider
+Delivered the strongest efficiency gain among tested strategies
+📉 Outcome
 
-This project investigates whether improving rider allocation can reduce delivery time and improve system performance.
+Combining redistribution and order batching reduced average delivery time to approximately:
 
----
+~31 minutes
 
-## Tools Used
+This demonstrates that performance improvements can be achieved without increasing rider headcount, but through better system design.
 
-- Microsoft Excel  
-  - Data cleaning  
-  - Table merging  
-  - Calculated fields  
-  - Analysis and simulation  
+🧩 Key Insight
 
----
+Delivery performance is not solely a function of rider quantity, but a combination of:
 
-## Data Preparation
+Capacity allocation
+Demand distribution
+Operational efficiency (batching)
+📁 Project Structure
+CSV/               Raw dataset files  
+EXCEL/             Analysis workbook  
+SCREENSHOTS/       Visual outputs and charts  
+README.md          Project documentation  
+🛠 Tools Used
+Microsoft Excel
+Data modeling & simulation
+Scenario analysis
+Basic operational modeling
+🚀 Conclusion
 
-Multiple datasets were merged to form a unified analytical structure.  
-Key steps included:
+This analysis shows that last-mile delivery performance is primarily a systems problem rather than a single-factor issue.
 
-- Merging order, rider, and delivery tables  
-- Cleaning missing and inconsistent values  
-- Creating derived metrics such as:
-  - Orders per rider  
-  - Average delivery time  
-- Structuring data for year-on-year comparison  
+Optimizing rider allocation and introducing order batching can significantly improve delivery efficiency without proportional increases in operational cost.
 
----
+📌 Note
 
-## Analytical Approach
+This analysis is based on a simulated dataset used for operational modeling and scenario testing.
 
-The analysis follows a structured framework:
+👤 Author
 
-### 1. Descriptive Analysis (What is happening?)
-Identifies trends and patterns in delivery performance.
+Mayokun Olayiwola
+Data Analyst | SQL | Excel | Power BI
 
-### 2. Diagnostic Analysis (Why is it happening?)
-Identifies the root cause of performance changes.
+🔗 GitHub: https://github.com/layimayokun/delivery-analysis
 
-### 3. Prescriptive Analysis (What should be done?)
-Suggests actionable improvements based on simulation.
+🔗 LinkedIn: https://www.linkedin.com/in/mayokun-jide-olayiwola
 
----
 
-## Key Insights
 
-### Descriptive Insight
-Late deliveries increased significantly in 2023 compared to 2022, indicating a decline in delivery performance as order volume increased.
 
-### Diagnostic Insight
-Orders per rider increased in 2023, showing that rider capacity did not scale with demand.  
-This resulted in higher workload pressure per rider, leading to delayed deliveries.
 
-### Prescriptive Insight
-A simulation based on an optimal threshold of ~100 orders per rider shows that reducing workload significantly improves average delivery time.
-
----
-
-## Recommendation
-
-To improve delivery efficiency:
-
-- Increase rider allocation in proportion to order growth  
-- Maintain a balanced orders-per-rider ratio  
-- Avoid overloading riders during demand surges  
-
-This ensures that operational capacity scales with demand, improving delivery speed and service quality.
-
----
-
-## Results Summary
-
-- Reduced rider workload leads to improved delivery performance  
-- Balanced capacity allocation improves operational efficiency  
-- Delivery time decreases when orders per rider are optimised  
-
----
-
-## Key Learnings
-
-This project strengthened my understanding of:
-
-- Descriptive, diagnostic, and prescriptive analytics  
-- Data cleaning and merging in Excel  
-- Capacity vs demand modelling  
-- Operational efficiency in logistics systems  
-- Simulation-based decision making  
-
----
-
-## Future Improvements
-
-Planned enhancements include:
-
-- Rebuilding the analysis in Power BI for interactive dashboards  
-- Adding predictive modelling for delivery time estimation  
-- Expanding dataset for real-world scenario simulation  
-- Building automated KPI tracking systems  
-
----
-
-## Author
-
-**Mayokun (Layimayokun)**  
-Aspiring Data Analyst
-
----
-
-## License
-
-This project is for educational and portfolio purposes.
